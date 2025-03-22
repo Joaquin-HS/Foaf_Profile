@@ -1,0 +1,38 @@
+@base <https://raw.githubusercontent.com/Joaquin-HS/Foaf_Profile/main/joaquin-herrera.ttl#> .
+
+@prefix jh: <https://raw.githubusercontent.com/Joaquin-HS/Foaf_Profile/main/joaquin-herrera.ttl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix wd: <https://www.wikidata.org/entity/> .
+@prefix ex: <http://example.org/>.
+
+<> a foaf:Document ;
+   dc:date "2025-03-21"^^xsd:date ;
+   dc:title "Joaquin's FOAF Profile"@en ;
+   foaf:primaryTopic <#jh> ;
+   dc:creator <#jh> .
+
+ex:Estudiante a rdfs:Class ;
+   rdfs:subClassOf foaf:Person .
+
+ex:estudiaEn a rdf:Property ;
+   rdfs:domain ex:Estudiante ;
+   rdfs:range wd:Q3918 .
+
+<#jh> a foaf:Person ;
+   rdfs:label "Joaquín Herrera" ;
+   rdfs:comment "Double degree student from DIE and MDS"@en , "Estudiante de doble titulación del DIE y MDS"@es ;
+   foaf:name "Joaquín Herrera" ;
+   foaf:givenName "Joaquín" ;
+   foaf:familyName "Herrera" ;
+   foaf:age 23 ;
+   foaf:mbox <mailto:joaquin.herrera.s@ug.uchile.cl> ;
+   foaf:img <https://avatars.githubusercontent.com/u/164127421?v=4> ;
+   foaf:homepage <https://www.linkedin.com/in/joaqu%C3%ADn-herrera-su%C3%A1rez> ;
+   foaf:knows <http://example.org/rodrigo-molina.ttl>, <https://www.example.com/frpezzolla> ;
+   foaf:nick "HideOnAcelga" ;
+   a ex:Estudiante ;
+   ex:estudiaEn wd:Q232141 .
